@@ -1,16 +1,8 @@
-Configuration HyperVScriptResource
+Configuration IISRemote
 {
-	Node localhost
+	WindowsFeature IIS
 	{
-		WindowsFeature IIS
-		{
-			Ensure="Present"
-			Name="Web-Server"
-		}
-		WindowsFeature ASP
-		{
-			Ensure="Present"
-			Name="Web-Asp-Net45"
-		}
+		Ensure="Present"
+		Name="Web-Server"
 	}
 }
