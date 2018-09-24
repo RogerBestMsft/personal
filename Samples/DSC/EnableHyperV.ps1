@@ -5,8 +5,8 @@ Configuration EnableIIS
     Node 'localhost' {
 	    WindowsFeature IIS
 	    {
-		    Ensure="Present"
-		    Name="Web-Server"
+		    Ensure='Present'
+		    Name='Web-Server'
 	    }
     }
 }
