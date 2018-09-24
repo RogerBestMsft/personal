@@ -1,8 +1,12 @@
-Configuration IISRemote
+Configuration EnableIIS
 {
-	WindowsFeature IIS
-	{
-		Ensure="Present"
-		Name="Web-Server"
-	}
+    Import-DscResource -ModuleName PsDesiredStateConfiguration
+
+    Node 'localhost' {
+	    WindowsFeature IIS
+	    {
+		    Ensure="Present"
+		    Name="Web-Server"
+	    }
+    }
 }
